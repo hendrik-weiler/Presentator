@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+
+	<language>en</language>
+	<path>
+		<interface>presentator/ui</interface>
+		<sites>presentator/sites</sites>
+		<vendor>presentator/vendor</vendor>
+	</path>
+
+</config>

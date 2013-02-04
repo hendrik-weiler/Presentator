@@ -1,0 +1,35 @@
+.preloader {
+	background: silver;
+	height: 30px;
+}
+
+.preloader-bar {
+	background: #dedede;
+	height: 28px;
+}
+
+.navigation {
+	background: gray;
+	right: 0;
+	top: 0;
+}
+
+.navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: #dedede;
+}
+
+.navigation li.selected a,
+.navigation li a:hover {
+	
+	color: black;
+}
+
+.navigation li a {
+	display: block;
+	padding: 5px;
+	color: white;
+	text-decoration: none;
+}

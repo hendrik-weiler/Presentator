@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bootstrap>
+	<environment>development</environment>
+	<include>
+		<source name="jquery-ui" href="jquery/jquery-ui.min.js" />
+		<source name="jquery-easing" href="jquery/jquery.easing.js" />
+		<source name="jquery-pause" href="jquery/jquery.pause.min.js" />
+		<source name="soundmanager2" href="soundmanager/soundmanager2.min.js" />
+
+		<source name="presentator-audio-sound" href="presentator/audio/sound.js" />
+		<source name="presentator-core-template" href="presentator/core/template.js" />
+		<source name="presentator-core-debug" href="presentator/core/debug.js" />
+		<source name="presentator-core-content" href="presentator/core/content.js" />
+
+		<source name="presentator-control-navigation" href="presentator/control/navigation.js" />
+	</include>
+	<components>
+		<component name="control.navigation" active="true" />
+	</components>
+</bootstrap>
