@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <text>
 
-	<test>This is another test</test>
+	<headline>How to get started</headline>
+
+	<button1>Open jsfiddle</button1>
+	<button2>Continue</button2>
+
+	<text1>To get started in our little tutorial we will use „jsfiddle“ to test javascript on.</text1>
+	<text2>To open jsfiddle click on the button below.</text2>
 
 </text>

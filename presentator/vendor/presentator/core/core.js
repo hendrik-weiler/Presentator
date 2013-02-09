@@ -34,6 +34,8 @@ if(presentator.core === undefined) presentator.core = {};
 
 	presentator.core.current_core_instance;
 
+	presentator.core.components = {};
+
 	presentator.core.core = function(bootstrap_xml, stage, resource_xml, config_xml)
 	{
 		presentator.core.stage = stage;
@@ -58,13 +60,16 @@ if(presentator.core === undefined) presentator.core = {};
 				var name = $(this)[0].getAttribute('name').split('.');
 				var component;
 
+				component = new presentator[name[0]][name[1]]();
+
 				if(name.length == 2 && $(this)[0].getAttribute('active') == "true")
 				{
-					component = new presentator[name[0]][name[1]]();
-
 					component.load();
+
+					name = name[1];
 				}
-				
+
+				presentator.core.components[name] = component;
 
 			});
 

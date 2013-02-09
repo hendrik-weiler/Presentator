@@ -1,3 +1,5 @@
+/* preloader */
+
 .preloader {
 	background: silver;
 	height: 30px;
@@ -7,6 +9,8 @@
 	background: #dedede;
 	height: 28px;
 }
+
+/* navigation */
 
 .navigation {
 	background: gray;
@@ -32,4 +36,22 @@
 	padding: 5px;
 	color: white;
 	text-decoration: none;
+}
+
+/* mute */
+
+.mute {
+	padding: 5px;
+	background: #dedede;
+	top: 435px;
+	left: 0px;
+}
+
+.mute img {
+	width: 30px;
+	height: 36px;
+}
+
+.mute.is_muted {
+	
 }

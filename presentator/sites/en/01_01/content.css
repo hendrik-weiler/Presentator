@@ -1,7 +1,45 @@
 .body {
-	background: blue;
+	
+}
+
+.continue_button {
+	display: block;
 	color: white;
-	height: 500px;
-	right: 0;
-	top: 0;
+	font-weight: bold;
+	text-decoration: none;
+	background: #498AF2;
+}
+
+.text1 {
+	position: absolute;
+	top: 170px;
+	left: 20px;
+	width: 80%;
+}
+
+.text2 {
+	position: absolute;
+	top: 240px;
+	left: 20px;
+	width: 80%;
+}
+
+.continue_button {
+	position: absolute;
+	top: 350px;
+	left: 420px;
+	padding: 10px;
+	text-align: center;
+	width: 100px;
+}
+
+.continue_button:hover {
+	background: #1a56af;
+}
+
+.headline {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size: 20px;
 }

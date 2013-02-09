@@ -13,8 +13,10 @@
 		<source name="presentator-core-content" href="presentator/core/content.js" />
 
 		<source name="presentator-control-navigation" href="presentator/control/navigation.js" />
+		<source name="presentator-control-mute" href="presentator/control/mute.js" />
 	</include>
 	<components>
 		<component name="control.navigation" active="true" />
+		<component name="control.mute" active="true" />
 	</components>
 </bootstrap>

@@ -36,6 +36,11 @@ if(presentator.control === undefined) presentator.control = {};
 
 		this.blacklist = [];
 
+		this.goto_page = function(name) {
+			var page = $(presentator.core.resource).find(presentator.core.config.language).find('site[name=' + name + ']');
+			presentator.core.current_content = new presentator.core.content(page);
+		}
+
 		this.load = function() {
 
 			var nav_list = $('<ul>');

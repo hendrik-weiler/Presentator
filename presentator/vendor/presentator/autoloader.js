@@ -47,7 +47,7 @@ if(presentator === undefined) var presentator = {};
 
 					var environment;
 
-					$.get('presentator/bootstrap.xml', function(data) {
+					$.get('presentator/bootstrap.xml?' + new Date().getTime(), function(data) {
 
 						bootstrap = $(data);
 
@@ -132,7 +132,7 @@ if(presentator === undefined) var presentator = {};
 								});
 							}
 
-							
+							console.log(bootstrap.find('source'));
 							load_script(bootstrap.find('source'), 0);
 
 						});

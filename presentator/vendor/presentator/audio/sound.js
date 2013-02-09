@@ -33,7 +33,7 @@ if(presentator.audio === undefined) presentator.audio = {};
 		if(finished_callback !== undefined) presentator.audio.onfinish_callback = finished_callback;
 
 		var soundObject = soundManager.createSound({
-		  id: audiofile,
+		  id: presentator.core.current_content.name + '_' + audiofile,
 		  url: presentator.core.config.sites + '/' + presentator.core.config.language + '/' + presentator.core.current_content.name + '/sound/' + audiofile,
 		  onfinish : presentator.audio.onfinish_callback
 		});

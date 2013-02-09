@@ -1,12 +1,32 @@
-presentator.content_ready = function() 
+presentator.content_ready = function(components, audio) 
 {
-/*
-	presentator.audio.play('02_01.mp3',function() {
 
+	$('.continue_button, .text1, .text2, .headline').hide();
+
+	$('.headline').fadeIn();
+
+	$('.text1').fadeIn();
+
+	$('.continue_button').click(function(e) {
+		e.preventDefault();
+
+		components.navigation.goto_page('01_02');
 	});
 
-	presentator.audio.wait_cue_point(1000, function() {
+	audio.play('01.mp3',function() {
 
+		$('.text2').fadeIn();
+
+		audio.play('02.mp3',function() {
+
+			$('.continue_button').fadeIn();
+
+			audio.play('03.mp3',function() {
+				
+			});
+		});
 	});
-*/
+
+
+
 }

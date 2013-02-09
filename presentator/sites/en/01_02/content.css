@@ -1,7 +1,72 @@
 .body {
-	background: green;
-	color: white;
-	height: 500px;
-	right: 0;
+
+}
+
+.text1 {
+	position: absolute;
+	top: 80px;
+	left: 20px;
+	width: 400px;
+}
+
+.text2 {
+	position: absolute;
+	top: 150px;
+	left: 20px;
+	width: 400px;
+}
+
+
+.headline {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size: 20px;
+}
+
+.border {
+	border: 3px solid red;
+	padding: 3px;
+	position: absolute;
 	top: 0;
+	left: 0;
+}
+
+.fiddle_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.continue_button {
+	position: absolute;
+	top: 420px;
+	left: 500px;
+	padding: 10px;
+	text-align: center;
+	width: 100px;
+}
+
+.fiddle_button {
+	position: absolute;
+	top: 420px;
+	left: 500px;
+	padding: 10px;
+	text-align: center;
+	width: 100px;
+}
+
+.continue_button,
+.fiddle_button {
+	display: block;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	background: #498AF2;
+}
+
+
+.continue_button:hover,
+.fiddle_button:hover {
+	background: #1a56af;
 }

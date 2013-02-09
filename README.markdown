@@ -11,3 +11,6 @@ Features:
 - multilanguage content
 
 [Development Demo](http://presentator.hendrikweiler.com)
+
+Known Bugs:
+- works only in IE8 if you started to use javascript debug ( weird )

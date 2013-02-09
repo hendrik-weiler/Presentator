@@ -86,7 +86,7 @@ if(presentator.core === undefined) presentator.core = {};
 				{
 					preloader.fade_out();
 					$(html_data).fadeIn();
-					presentator.content_ready();
+					presentator.content_ready(presentator.core.components, presentator.audio);
 				}
 
 				site_instance.find('resource').each(function(key, obj) {

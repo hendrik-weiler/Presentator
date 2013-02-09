@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <text>
 
-	<test>This is a test</test>
+	<headline>Introduction</headline>
+
+	<text1>Welcome to this short introduction to javascript. In this tutorial you will learn how to use variables in combination with the document object. </text1>
+	<text2>At the same time, it will show you the current features of the presentator software.</text2>
+
+	<button>Continue</button>
 
 </text>

@@ -52,7 +52,7 @@ if(isset($config->path->sites))
 
 							foreach (scandir($config->path->sites . '/' . $lang_prefix . '/' . $site_folder . '/images') as $file) 
 							{
-								if(!in_array($file , array('.','..')))
+								if(!in_array($file , array('.','..','.DS_Store')))
 								{
 									$resource = $site->addChild('resource');
 									$resource->addAttribute('type', 'images');
@@ -68,7 +68,7 @@ if(isset($config->path->sites))
 
 							foreach (scandir($config->path->sites . '/' . $lang_prefix . '/' . $site_folder . '/sound') as $file) 
 							{
-								if(!in_array($file , array('.','..')))
+								if(!in_array($file , array('.','..','.DS_Store')))
 								{
 									$resource = $site->addChild('resource');
 									$resource->addAttribute('type', 'sound');
@@ -84,7 +84,7 @@ if(isset($config->path->sites))
 
 							foreach (scandir($config->path->sites . '/' . $lang_prefix . '/' . $site_folder . '/scripts') as $file) 
 							{
-								if(!in_array($file , array('.','..')))
+								if(!in_array($file , array('.','..','.DS_Store')))
 								{
 									$resource = $site->addChild('resource');
 									$resource->addAttribute('type', 'scripts');
