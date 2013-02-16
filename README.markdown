@@ -4,13 +4,17 @@ Presentator
 ## Beta Version
 
 This javascript based framework is able to presentate different stuff.
+Example: Banners, Presentations ( Powertpoint-like ), Tutorials
 
 Features:
-- autoloading content assets
+- autoloading content assets (html / js / css/ images/ mp3's)
 - display multiple contents ( navigation control )
 - multilanguage content
 
-[Development Demo](http://presentator.hendrikweiler.com)
+Browser Support:
+- IE8, IE9 ( ie10 not tested )
+- Firefox
+- Chrome
+- Opera
 
-Known Bugs:
-- works only in IE8 if you started to use javascript debug ( weird )
+[Development Demo](http://presentator.hendrikweiler.com)

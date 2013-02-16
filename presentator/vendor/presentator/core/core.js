@@ -24,6 +24,8 @@ if(presentator.core === undefined) presentator.core = {};
 
 (function(document, window, presentator, soundManager) {
 
+	presentator.version = 0.00;
+
 	presentator.core.stage = $('body');
 
 	presentator.core.resource = {};
@@ -78,13 +80,14 @@ if(presentator.core === undefined) presentator.core = {};
 
 		this.initialize = function()
 		{
+			soundManager.debugMode = (presentator.environment == 'development');
 			soundManager.setup({
 			  url: presentator.core.config.vendor + '/soundmanager/',
 			  onready: function() {
 
 			  	if(presentator.environment == 'development') console.log('#### Soundmanger2 finished loading ####');
 
-				new presentator.core.content(presentator.core.resource.find('site:first'));
+				new presentator.core.content(presentator.core.resource.find(presentator.core.config.language).find('site:first'));
 			  }
 			});
 			soundManager.ontimeout(function() {

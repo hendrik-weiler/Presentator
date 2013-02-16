@@ -21,6 +21,11 @@
  */
 
 if(presentator === undefined) var presentator = {};
+if(console === undefined)
+{
+	var console = {};
+	console.log = new Function;
+}
 
 (function(document, window, presentator) {
 
@@ -34,12 +39,12 @@ if(presentator === undefined) var presentator = {};
 
 		this.load = function() {
 
-			$(element).load('presentator/frame.html').css({
-				position : 'relative',
-				overflow : 'hidden'
-			});
-
 			$.get(config_path).done(function(config_data) {
+
+				$(element).load('presentator/frame_' + $(config_data).find('language').text() + '.html').css({
+					position : 'relative',
+					overflow : 'hidden'
+				});
 
 				$(function() {
 
@@ -53,7 +58,7 @@ if(presentator === undefined) var presentator = {};
 
 						environment = bootstrap.find('environment').text();
 
-						if(environment == 'development') console.log('#### Autoloading Presentator ####');
+						if(environment == 'development' && console !== undefined) console.log('#### Autoloading Presentator ####');
 
 
 						$.getScript($(config_data).find('vendor').text() + '/presentator/control/preloader.js', function() {
@@ -75,7 +80,7 @@ if(presentator === undefined) var presentator = {};
 
 									$.getScript($(config_data).find('vendor').text() + '/presentator/core/core.js', function() {
 
-										if(environment == 'development') console.log('Loaded Core');
+										if(environment == 'development' && console !== undefined) console.log('Loaded Core');
 
 										counter++;
 										preloader.set_progress(counter / max);
@@ -100,7 +105,7 @@ if(presentator === undefined) var presentator = {};
 								  dataType: 'script',
 								  success: function(result) {
 
-									if(environment == 'development') console.log('Load library: ' + href);
+									if(environment == 'development' && console !== undefined) console.log('Load library: ' + href);
 
 									counter++;
 									preloader.set_progress(counter / max);
@@ -116,7 +121,7 @@ if(presentator === undefined) var presentator = {};
 
 								  },
 								  error : function(data, status, error) {
-								  	if(environment == 'development') console.log('## Failed to load library: ' + href + ', status:' + status);
+								  	if(environment == 'development' && console !== undefined) console.log('## Failed to load library: ' + href + ', status:' + status);
 								  	max--;
 
 									if( (counter + 2) == max)
@@ -132,7 +137,6 @@ if(presentator === undefined) var presentator = {};
 								});
 							}
 
-							console.log(bootstrap.find('source'));
 							load_script(bootstrap.find('source'), 0);
 
 						});

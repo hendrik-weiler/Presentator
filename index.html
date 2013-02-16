@@ -1,33 +1,34 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
 	<link rel="stylesheet" type="text/css" href="presentator/frame.css">
 	<script type="text/javascript" src="presentator/vendor/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="presentator/vendor/presentator/autoloader.js"></script>
 	<style type="text/css">
-	.canvas {
+	div.positionieren {
+		width: 640px;
+		margin: 200 auto;
+	}
+	div.canvas {
 		border:5px solid #dedede;
 		width: 640px;
 		height: 480px;
-		margin: auto;
 		background: #ededed;
 		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	}
 	</style>
-	<script type="text/javascript">
-	$(function() {
-		$('.canvas').css({
-			marginTop : ($(window).height() / 2) - ($('.canvas').height() / 2)
-		});
-	});
-	</script>
 </head>
 <body>
-	<div class="canvas"></div>
+	<div class="positionieren">
+		<div class="canvas"></div>
+	</div>
 
 	<script type="text/javascript">
-	var presenatation = new presentator.autoloader($('.canvas'),'presentator/config.xml');
-	presenatation.load();
+	$(function() {
+		var presenatation = new presentator.autoloader($('.canvas'),'presentator/config.xml');
+		presenatation.load();
+	});
 	</script>
 </body>
 </html>
