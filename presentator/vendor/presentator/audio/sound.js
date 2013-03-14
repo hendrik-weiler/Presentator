@@ -30,17 +30,28 @@ if(presentator.audio === undefined) presentator.audio = {};
 
 	presentator.audio.play = function(audiofile, finished_callback)
 	{
+		soundManager.stopAll();
+
 		if(finished_callback !== undefined) presentator.audio.onfinish_callback = finished_callback;
 
+		var audio_id = 'presentator_' + presentator.core.current_content.name + '_' + audiofile;
+
 		var soundObject = soundManager.createSound({
-		  id: presentator.core.current_content.name + '_' + audiofile,
+		  id: audio_id,
+		  autoPlay: false,
+		  multiShotEvents : true,
+		  multiShot: false,
+		  stream : true,
 		  url: presentator.core.config.sites + '/' + presentator.core.config.language + '/' + presentator.core.current_content.name + '/sound/' + audiofile,
 		  onfinish : presentator.audio.onfinish_callback
 		});
 		
 		presentator.audio.current_audio = soundObject;
-
-		soundObject.play();
+		setTimeout(function() {
+			soundManager.play(audio_id);
+		}, 1000);
+		
+	
 	}
 
 	presentator.audio.wait_cue_point = function(time, callback) 
