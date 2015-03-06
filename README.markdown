@@ -17,4 +17,4 @@ Browser Support:
 - Chrome
 - Opera
 
-[Development Demo](http://presentator.hendrikweiler.com)
+# This project wont be maintained anymore
